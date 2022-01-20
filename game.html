@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <center>
+            <h2 id="pro">Procedure:</h2>
+            <h2 id=sub_1>1.Hit start</h2>
+            <br>
+            <h2 id="sub_2">2.listen carfully</h2>
+            <br>
+            <h2 id="sub_3">3. Hit Stop when you can't hear any sound</h2>
+            <br>
+
+            <hr>
+            <h1 id="head_1">Plaese sit in a quiet place and test your years</h1>
+            <h2 id="intro_2">Use headphones with testing</h2>
+            <hr>
+            <audio id="my_audio">
+                <source src="VIDEO-2020-05-30-10-01-07.mp4" type="audio/mpeg">
+            </audio>
+            <div id="time"></div>
+            <br>
+            <br>
+            <div id="countdown" class="col-xs-12 header_div"></div>
+            <img id="img_20" src="https://i.gifer.com/Nt6v.gif">
+            <br>
+            <br>
+            <br>
+            <button onclick="playAudio()" type="button" id="button_5">Start Audio</button>
+            <button onclick="pauseAudio()" type="button" id="button_6">Stop Audio</button>
+            <br>
+            <br>
+            <br>
+            <button id="button_34"><a href="index.html">Back to home</button>
+            <button id="button_32"><a href="test.html">Next</button>
+
+            <script>
+                var i=0;
+                var x = document.getElementById("my_audio");
+                function playAudio() {
+                    x.play();
+                    interval = setInterval(time1, 1000);
+                }
+
+                function time1() {
+                    document.getElementById("time").innerHTML = i;
+                    i++;
+
+                    if (i == 55) {
+                        i = 0;
+                        document.getElementById("time").innerHTML = i;
+                        interval = clearInterval(interval);
+                    }
+                }
+
+                function pauseAudio() {
+                    x.pause();
+                    interval = clearInterval(interval);
+                }
+            </script>
+
+        </center>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html
